@@ -25,6 +25,9 @@ gem 'envyable'
 gem 'activerecord'
 gem 'activesupport'
 
+#xboxapi gem
+gem 'xbox-api'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

@@ -1,6 +1,5 @@
 class MedalsController < ApplicationController
 	def show
-		str = params[:id].titleize
-		@medal = Medal.find_by(name: str)
+		@medal = Medal.find_by(medal_id: params[:id].titleize)
 	end
 end
