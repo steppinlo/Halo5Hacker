@@ -1,11 +1,7 @@
 <p>HELLO</p>
 
-<% @matchEvents.each do |event| %>
-	<HR>
-	<% event.each do |key, value| %>
-		<B><%= key %>:</B> 
-		<%= value %>
-		<br>
-		<BR>
-	<% end %>
+<% @matchEvents.PlayerStats[0].marshal_dump.each do |k, v|  %>
+	<%= k %>: <%= v %> 
+	<BR>
+	<BR>
 <% end %>

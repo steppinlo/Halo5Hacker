@@ -1,5 +1,6 @@
 require 'net/http'
 require 'json'
+require 'ostruct'
 
 
 
@@ -16,7 +17,7 @@ module HaloApi
 			response = Net::HTTP.start(uri.host, uri.port, :use_ssl => uri.scheme == 'https') do |http|
 		    	http.request(request)
 			end
-			return JSON.parse(response.body)
+			return JSON.parse(response.body, object_class: OpenStruct)
 		end
 	end
 end

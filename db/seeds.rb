@@ -26,6 +26,10 @@ require 'ostruct'
 		medal = {name: m.name.downcase, difficulty: m.difficulty, medal_id: m.id, spriteLocation: m.spriteLocation}
 		Medal.create!(medal)			
 	end
+
+	user = $xbox_client.gamer("sloster")
+	game_clips = user.game_specific_clips("219630713")
+	JSON.pretty_generate(game_clips)
 # end
 
 # fetchMedals

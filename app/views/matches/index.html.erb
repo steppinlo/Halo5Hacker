@@ -1,0 +1,8 @@
+<% @matchEvents.each do |event| %>
+	<%= event %>
+	<BR>
+	<br>
+	<%= link_to "Match", {controller: "matches", action: "show", path:  event.Id.MatchId} %>
+	<br>
+	<br>
+<% end %>
